@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "target": "ES2019",
+        "module": "CommonJS",
+        "lib": ["ESNext"],
+        "declaration": true,
+        "removeComments": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": true,
+        "baseUrl": "./",
+        "incremental": false,
+        "skipLibCheck": true,
+        "moduleResolution": "node"
+    }
+}

@@ -1,0 +1,11 @@
+.env
+.docker
+.git
+.github
+.vscode
+apps/web
+dist
+docs
+lib
+node_modules
+**/node_modules

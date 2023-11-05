@@ -1,0 +1,6 @@
+{
+    "MD024": false, // disable: no-duplicate-heading/no-duplicate-header
+    "MD013": false, // disable: line-length
+    "MD033": false, // disable: no-inline-html
+    "MD041": false, // disable: first-line-heading/first-line-h1
+}
