@@ -56,10 +56,6 @@ Work in progress...
 
 ## SSO (iframe integration)
 
-> &nbsp;
-> :warning: If you cannot see the diagram below, please install the [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) VSCode extension.
-> &nbsp;
-
 This section illustrates the process of authenticating a user in the context of a GHL Marketplace App's Custom Pages, by using the new GHL SSO feature. The SSO flow works as follows:
 
 1. The user navigates to the GHL App under the Marketplace menu.
@@ -72,29 +68,7 @@ This section illustrates the process of authenticating a user in the context of 
 8. The back-end returns the decrypted SSO session info to the Custom Page along with any relevant app-specific data.
 9. The Custom Page now has access to the user's SSO session info and can use it to show content or provide functionality that is user-, location-, or agency-specific.
 
-```plantuml
-@startuml GHL App SSO Integration
-skinparam lifelineStrategy nosolid
-
-actor User as user
-participant "GHL" as ghl
-participant "GHL Server" as server
-participant "GHL App Custom Page" as web
-participant "GHL App Back-End" as api
-
-user -> ghl : navigates to GHL App under Marketplace
-ghl -> web : loads App Custom Page in iframe
-web -> ghl : requests SSO session info
-ghl -> server : requests SSO session info for App
-server -> ghl : returns ecrypted SSO session info
-ghl -> web : returns ecrypted SSO session info
-web -> api : sends session info
-api -> api : decrypts session info with SSO Token
-api -> web : returns decrypted SSO session info
-web -> user : shows user/location/agency-specific content
-
-@enduml
-```
+![SSO Flow](./docs/diagrams/ghl-app-sso.svg)
 
 For a reference implementation see the code in `apps/server/public/js/ghl.mjs`.
 

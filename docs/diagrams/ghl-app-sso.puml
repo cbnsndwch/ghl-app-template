@@ -1,0 +1,21 @@
+@startuml GHL App SSO Integration
+skinparam lifelineStrategy nosolid
+
+actor User as user
+participant "GHL" as ghl
+participant "GHL App Custom Page" as web
+participant "GHL Server" as server
+participant "GHL App Back-End" as api
+
+user -> ghl : navigates to GHL App under Marketplace
+ghl -> web : loads App Custom Page in iframe
+web -> ghl : requests SSO session info
+ghl -> server : requests SSO session info for App
+server -> ghl : returns ecrypted SSO session info
+ghl -> web : returns ecrypted SSO session info
+web -> api : sends session info
+api -> api : decrypts session info with SSO Token
+api -> web : returns decrypted SSO session info
+web -> user : shows user/location/agency-specific content
+
+@enduml
