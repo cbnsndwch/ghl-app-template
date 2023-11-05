@@ -1,18 +1,106 @@
 {
     "compilerOptions": {
-        "target": "ES2019",
-        "module": "CommonJS",
-        "lib": ["ESNext"],
-        "declaration": true,
-        "removeComments": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "sourceMap": true,
-        "baseUrl": "./",
+        /**
+         * Disable incremental compilation of projects.
+         */
         "incremental": false,
+        /**
+         * Default output target to ECMAScript 2022. Override as needed in
+         * workspaces.
+         */
+        "target": "ES2022",
+        /**
+         * Specify a set of bundled library declaration files that describe the
+         * target runtime environment.
+         */
+        "lib": [
+            "ESNext",
+            "DOM"
+        ],
+        /**
+         * Enable experimental support for TC39 stage 2 draft decorators.
+         */
+        "experimentalDecorators": true,
+        /**
+         * Emit design-type metadata for decorated declarations in source files.
+         */
+        "emitDecoratorMetadata": true,
+        /**
+         * Default output format to CommonJS. Override as needed in workspaces.
+         */
+        "module": "CommonJS",
+        /**
+         * Specify how TypeScript looks up a file from a given module specifier.
+         */
+        "moduleResolution": "node",
+        /**
+         * Specify the base directory to resolve non-relative module names.
+         */
+        "baseUrl": ".",
+        /**
+         * Generate .d.ts files from TypeScript and JavaScript files in your
+         * project.
+         */
+        "declaration": true,
+        /**
+         * Create source map files for emitted JavaScript files.
+         */
+        "sourceMap": true,
+        /**
+         * Specify an output folder for all emitted files.
+         */
+        "outDir": "dist",
+        /**
+         * Disable emitting comments.
+         */
+        "removeComments": true,
+        /**
+         * Set the newline character for emitting files.
+         */
+        "newLine": "lf",
+        /**
+         * Enable all strict type-checking options.
+         */
+        "strict": true,
+        /**
+         * Check that the arguments for 'bind', 'call', and 'apply' methods
+         * match the original function.
+         */
+        "strictBindCallApply": true,
+        /**
+         * Enable error reporting for fallthrough cases in switch statements.
+         */
+        "noFallthroughCasesInSwitch": true,
+        /**
+         * Emit additional JavaScript to ease support for importing CommonJS
+         * modules. This enables 'allowSyntheticDefaultImports' for type
+         * compatibility.
+         */
+        "esModuleInterop": true,
+        /**
+         * Allow 'import x from y' when a module doesn't have a default export.
+         */
+        "allowSyntheticDefaultImports": true,
+        /**
+         * Ensure that casing is correct in imports.
+         */
+        "forceConsistentCasingInFileNames": true,
+        /**
+         * Skip type checking all .d.ts files.
+         */
         "skipLibCheck": true,
-        "moduleResolution": "node"
+        /**
+         * Allow JavaScript files to be a part of your program. Use the
+         * 'checkJS' option to get errors from these files.
+         */
+        "allowJs": true,
+        /**
+         * Use the Typescript toolchain to Check JavaScript files.
+         */
+        "checkJs": true,
+        /**
+         * Default type of caught errors to `any`.
+         */
+        "useUnknownInCatchVariables": false
     }
 }

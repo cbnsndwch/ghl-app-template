@@ -46,10 +46,10 @@ lerna-debug.log*
 !.vscode/extensions.json
 
 # Environments and credentials
-**/.env*
 *credentials
-apps/api/config/*.env
-apps/n8n-proxy/config/*.env
+**/.env
+**/.env*
+!apps/server/.env.example
 
 # Others
 lerna-debug.log
@@ -72,3 +72,5 @@ yarn.lock
 
 /tools/dependabot-branches.txt
 /packages/portal-components/storybook-static
+
+.turbo

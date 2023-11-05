@@ -1,6 +1,6 @@
 {
     "eslint.workingDirectories": [
-        "apps/api",
+        "apps/server",
         "apps/web"
     ],
     "eslint.lintTask.options": "-c .eslintrc.vscode.js",
@@ -32,5 +32,8 @@
         "tsconfig.json": "tsconfig.*.json,tsconfig.tsbuildinfo",
         "typedoc.config.js": "typedoc.*.jsonc, typedoc.*.json"
     },
-    "editor.rulers": [80]
+    "editor.rulers": [
+        80
+    ],
+    "markdown-preview-enhanced.plantumlServer": "https://kroki.io/plantuml/svg/",
 }

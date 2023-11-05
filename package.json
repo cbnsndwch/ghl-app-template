@@ -6,7 +6,7 @@
     "private": true,
     "repository": "https://github.com/cbnsndwch/ghl-app",
     "author": {
-        "name": "cbnsndwch LLC",
+        "name": "Sergio Leon",
         "url": "https://github.com/cbnsndwch"
     },
     "workspaces": {

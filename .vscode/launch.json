@@ -5,10 +5,10 @@
             "name": "Debug API",
             "type": "node",
             "request": "launch",
-            "runtimeArgs": [
-                "start:debug"
-            ],
             "runtimeExecutable": "yarn",
+            "runtimeArgs": [
+                "dev"
+            ],
             "skipFiles": [
                 "<node_internals>/**",
                 "**/node_modules/@nestjs/**"
@@ -16,7 +16,7 @@
             "env": {
                 "LOG_LEVEL": "VERBOSE",
             },
-            "cwd": "${workspaceRoot}/apps/api",
+            "cwd": "${workspaceRoot}/apps/server",
             "console": "integratedTerminal"
         },
         {
