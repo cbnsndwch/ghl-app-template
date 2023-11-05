@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'daily'
+      time: '19:00'
+      timezone: 'America/New_York'
+    open-pull-requests-limit: 4
+    target-branch: "develop"
+    ignore:
+      - dependency-name: typescript
+      - dependency-name: '*'
+        update-types: 
+          - 'version-update:semver-major'
