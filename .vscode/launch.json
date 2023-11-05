@@ -1,0 +1,66 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug API",
+            "type": "node",
+            "request": "launch",
+            "runtimeArgs": [
+                "start:debug"
+            ],
+            "runtimeExecutable": "yarn",
+            "skipFiles": [
+                "<node_internals>/**",
+                "**/node_modules/@nestjs/**"
+            ],
+            "env": {
+                "LOG_LEVEL": "VERBOSE",
+            },
+            "cwd": "${workspaceRoot}/apps/api",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Start Web",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "runtimeExecutable": "yarn",
+            "cwd": "${workspaceRoot}/apps/web",
+            "runtimeArgs": [
+                "start"
+            ],
+        },
+        {
+            "name": "Web - Chrome Debug",
+            "request": "launch",
+            "type": "chrome",
+            "webRoot": "${workspaceRoot}/apps/web",
+            "url": "http://localhost:5173",
+        },
+        {
+            "name": "Web - Firefox Debug",
+            "request": "launch",
+            "type": "firefox",
+            "webRoot": "${workspaceRoot}/apps/web",
+            "url": "http://localhost:5173",
+        },
+        {
+            "name": "Web - Edge Debug",
+            "request": "launch",
+            "type": "msedge",
+            "url": "http://localhost:5173",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Debug Current File",
+            "type": "node",
+            "request": "launch",
+            "program": "${file}",
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        }
+    ]
+}
