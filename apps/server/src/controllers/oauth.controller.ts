@@ -7,9 +7,11 @@ import {
     Redirect
 } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
+import { ApiOperation, ApiQuery, ApiTags } from '@nestjs/swagger';
 
 import { GhlCredentialsService, GhlApiClient } from '../services';
 
+@ApiTags('OAuth')
 @Controller('oauth')
 export class OAuthController {
     private readonly logger = new Logger(OAuthController.name);
@@ -51,9 +53,30 @@ export class OAuthController {
      *
      * @param code The OAuth code from GHL
      */
+    @ApiOperation({
+        operationId: 'handleOauthCallback',
+        summary: 'Handles the OAuth callback from GHL.',
+        description: [
+            `This endpoint is called by GHL after the user has authorized your app.`,
+            `It exchanges the OAuth code for an ceredentials set (access + refresh tokens),`,
+            `stores the credentials set in your app's back-end, and redirects the user to your`,
+            `app's installation thank-you page.`
+        ].join('\n'),
+        externalDocs: {
+            description: 'GHL APIv2 OAuth Authorization Code Flow',
+            url: 'https://highlevel.stoplight.io/docs/integrations/a04191c0fabf9-authorization'
+        }
+    })
+    @ApiQuery({
+        name: 'code',
+        description: 'The OAuth Authorization Code from GHL.'
+    })
     @Get('callback')
     @Redirect('/', 302)
-    async handleOauthCallback(@Query('code') code: string) {
+    async handleOauthCallback(
+        @Query('code')
+        code: string
+    ) {
         if (!code) {
             const msg =
                 'No OAuth Authorization Code received. Was this a valid OAuth callback?';

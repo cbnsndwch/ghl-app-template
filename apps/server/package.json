@@ -27,6 +27,7 @@
         "@nestjs/mongoose": "^10.0.1",
         "@nestjs/platform-express": "^10.0.0",
         "@nestjs/serve-static": "^4.0.0",
+        "@nestjs/swagger": "^7.1.14",
         "axios": "^1.6.0",
         "crypto-js": "^4.2.0",
         "dotenv": "^16.3.1",
