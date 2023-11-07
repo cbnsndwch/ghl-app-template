@@ -74,3 +74,4 @@ yarn.lock
 /packages/portal-components/storybook-static
 
 .turbo
+/.yarn/versions
