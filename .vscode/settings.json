@@ -1,7 +1,8 @@
 {
     "eslint.workingDirectories": [
         "apps/server",
-        "apps/web"
+        "apps/web",
+        "libs/contracts"
     ],
     "eslint.lintTask.options": "-c .eslintrc.vscode.js",
     "files.eol": "\n",

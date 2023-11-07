@@ -1,7 +1,7 @@
-import './ghl.mjs';
+import './sso.mjs';
 
 document.addEventListener('DOMContentLoaded', async () => {
-    const data = await window.ghl.getUserData();
+    const data = await window.sso.getUserInfo();
 
     data.userId = '•••••••••••••••••••• (redacted)';
     data.companyId = '•••••••••••••••••••• (redacted)';

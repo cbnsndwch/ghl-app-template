@@ -1,39 +1,34 @@
-import { Controller, Get, Headers } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
-import CryptoJS from 'crypto-js';
+import {
+    Controller,
+    Get,
+    UnauthorizedException,
+    UseGuards
+} from '@nestjs/common';
 
-@Controller()
+import type { IGhlSsoSession, IUser } from '@cbnsndwch/ghl-app-contracts';
+
+import { GhlSsoUser } from '../decorators';
+import { GhlSsoGuard } from '../guards';
+
+@Controller('sso')
 export class SsoSessionController {
     /**
-     * Your app's SSO Key from the GHL Marketplace.
+     * Returns the combined user profile data from the incoming GHL SSO session
+     * and your app's back-end.
      *
-     * You can find your GHL SSO key under Settings in your Marketplace App's
-     * details page. It should look like this:
-     * xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-     *
-     * NOTE: It's a best practice to load secrets from environment variables
-     * instead of hardcoding them in your code.
+     * @param user The GHL SSO session information, including app-specific user
+     * information fetched from your back-end. See the `GhlSsoUser` decorator
+     * implementation for more details.
      */
-    private readonly GHL_SSO_KEY: string;
+    @Get('ghl')
+    @UseGuards(GhlSsoGuard)
+    getGhlSession(@GhlSsoUser() user: IGhlSsoSession & IUser) {
+        if (!user) {
+            throw new UnauthorizedException(
+                'No SSO session key provided, did you forget to include the `x-sso-session` header?'
+            );
+        }
 
-    /**
-     * Initializes a new instance of the `SsoSessionController` class.
-     *
-     * **NOTE**: Don't instantiate this class directly. NestJS will do that
-     * for you, and take care of injecting the `ConfigService` instance.
-     */
-    constructor(configService: ConfigService) {
-        this.GHL_SSO_KEY = configService.get<string>('GHL_SSO_KEY')!;
-    }
-
-    @Get('api/ghl/sso/session')
-    getGhlSession(@Headers('x-ghl-sso-key') encryptedSession: string): string {
-        const sessionJson = CryptoJS.AES.decrypt(
-            encryptedSession,
-            this.GHL_SSO_KEY
-        ).toString(CryptoJS.enc.Utf8);
-
-        const session = JSON.parse(sessionJson);
-        return session;
+        return user;
     }
 }
