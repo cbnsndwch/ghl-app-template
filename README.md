@@ -13,9 +13,9 @@ A base template for full-stack HighLevel Marketplace apps
 ## Getting Started
 
 > &nbsp;
-> :warning: This project requires a recent version of NodeJS installed on your machine. The
-> curret LTS version is NodeJS 20.x but you should be OK using NodeJS 18.x through
-> until the end of the maintenance period in April 2025.
+> :warning: This project requires a recent version of NodeJS installed on your
+> machine. The current LTS version is NodeJS 20.x but you should be OK using
+> NodeJS 18.x until the end of the maintenance period in April 2025.
 >
 > For more information on NodeJS LTS releases, see the [NodeJS Release Schedule].
 > &nbsp;
