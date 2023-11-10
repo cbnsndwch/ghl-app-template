@@ -62,6 +62,7 @@ tsconfig.tsbuildinfo
 !/docs/docs-app
 !/docs/badges
 !/docs/diagrams
+!/docs/openapi
 /apps/web/.yarn/cache/
 /yarn.lock
 yarn.lock
