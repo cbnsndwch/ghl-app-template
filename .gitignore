@@ -59,6 +59,7 @@ tsconfig.tsbuildinfo
 
 # Local docs and tests
 /docs/*
+!/docs/assets
 !/docs/docs-app
 !/docs/badges
 !/docs/diagrams
