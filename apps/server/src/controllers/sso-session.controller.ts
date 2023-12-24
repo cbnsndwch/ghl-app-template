@@ -1,6 +1,7 @@
 import {
     Controller,
     Get,
+    Logger,
     UnauthorizedException,
     UseGuards
 } from '@nestjs/common';
@@ -14,6 +15,8 @@ import { GhlSsoGuard } from '../guards';
 @ApiTags('SSO')
 @Controller('sso')
 export class SsoSessionController {
+    private readonly logger = new Logger(SsoSessionController.name);
+
     /**
      * Returns the combined user profile data from the incoming GHL SSO session
      * and your app's back-end.
@@ -42,6 +45,8 @@ export class SsoSessionController {
     @Get('ghl')
     @UseGuards(GhlSsoGuard)
     getUserInfo(@GhlSsoUser() user: IGhlSsoSession & IUser) {
+        this.logger.debug('getUserInfo', user);
+
         if (!user) {
             throw new UnauthorizedException(
                 'No SSO session key provided, did you forget to include the `x-sso-session` header?'

@@ -30,7 +30,7 @@ import { services } from './services';
             // all files in the `public` folder will be served by the app
             rootPath: `${process.cwd()}/public`,
             // exclude API routes from the static file server
-            exclude: ['/api*'],
+            exclude: ['/api/*', '/graphql'],
             renderPath: /\/(!:[])/
         }),
         MongooseModule.forRootAsync({
