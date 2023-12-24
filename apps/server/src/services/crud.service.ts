@@ -85,7 +85,7 @@ export abstract class CrudService<
         const filter = this.prepareFilter(filters);
         const select = this.prepareProjection(projection);
 
-        const count = await this.model.count(filter);
+        const count = await this.model.countDocuments(filter);
         const items = await this.model
             .find(filter, select)
             .skip(offset)
