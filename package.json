@@ -31,7 +31,7 @@
         "change-case": "^5.1.2",
         "conventional-changelog-cli": "^4.1.0",
         "http-server": "^14.1.1",
-        "turbo": "~1.11.2"
+        "turbo": "~1.12.3"
     },
     "packageManager": "yarn@3.6.4"
 }
