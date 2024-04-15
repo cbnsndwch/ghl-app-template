@@ -1,5 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { ApiProperty } from '@nestjs/swagger';
+import { Document } from 'mongoose';
 
 import { AppUserType, IGhlCredentials } from '@cbnsndwch/ghl-app-contracts';
 
@@ -56,6 +57,8 @@ export class GhlCredentials implements IGhlCredentials {
     @Prop({ required: true })
     scopes!: string[];
 }
+
+export type GhlCredentialsDocument = GhlCredentials & Document;
 
 export const GhlCredentialsSchema =
     SchemaFactory.createForClass(GhlCredentials);

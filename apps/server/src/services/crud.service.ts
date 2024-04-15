@@ -1,5 +1,5 @@
 import { Logger } from '@nestjs/common';
-import { FilterQuery, Model } from 'mongoose';
+import { Document, FilterQuery, Model } from 'mongoose';
 
 import {
     HasId,
@@ -18,7 +18,7 @@ export abstract class CrudService<
     protected readonly logger: Logger;
 
     protected constructor(
-        protected readonly model: Model<TEntity>,
+        protected readonly model: Model<TEntity & Document>,
         logger?: Logger
     ) {
         this.logger = logger ?? new Logger(this.constructor.name);
@@ -105,7 +105,7 @@ export abstract class CrudService<
      *
      * @param input Query filters
      */
-    async findOne(input: FilterQuery<TContract>) {
+    async findOne(input: FilterQuery<TEntity & Document>) {
         const result = await this.model.findOne(input);
         return result;
     }
@@ -144,7 +144,7 @@ export abstract class CrudService<
      * @param filter The input with filters to find the record to update
      * @param update The input with the new values to `$set` on the record.
      */
-    async update(filter: FilterQuery<TContract>, update: TUpdateInput) {
+    async update(filter: FilterQuery<TEntity & Document>, update: TUpdateInput) {
         const result = await this.model.findOneAndUpdate(
             filter,
             { $set: update },

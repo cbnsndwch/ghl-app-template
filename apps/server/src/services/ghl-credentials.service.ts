@@ -10,7 +10,7 @@ import {
     IGhlCredentials
 } from '@cbnsndwch/ghl-app-contracts';
 
-import { GhlCredentials } from '../entities';
+import { GhlCredentials, GhlCredentialsDocument } from '../entities';
 
 import { CrudService } from './crud.service';
 
@@ -26,7 +26,7 @@ export class GhlCredentialsService
      * for you, and take care of injecting the mongoose model instance.
      */
     constructor(
-        @InjectModel(GhlCredentials.name) model: Model<GhlCredentials>
+        @InjectModel(GhlCredentials.name) model: Model<GhlCredentialsDocument>
     ) {
         super(model, new Logger(GhlCredentialsService.name));
     }
