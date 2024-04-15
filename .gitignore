@@ -65,8 +65,6 @@ tsconfig.tsbuildinfo
 !/docs/diagrams
 !/docs/openapi
 /apps/web/.yarn/cache/
-/yarn.lock
-yarn.lock
 /apps/web/.env
 /changelog-temp.md
 

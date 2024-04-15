@@ -28,7 +28,7 @@
         "clog": "conventional-changelog -p angular -i CHANGELOG.md -o changelog-temp.md"
     },
     "devDependencies": {
-        "change-case": "^5.1.2",
+        "change-case": "^5.4.4",
         "conventional-changelog-cli": "^4.1.0",
         "http-server": "^14.1.1",
         "npm-check-updates": "^16.14.18",
