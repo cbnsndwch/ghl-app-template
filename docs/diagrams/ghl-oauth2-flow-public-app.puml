@@ -1,0 +1,47 @@
+@startuml "GHL OAuth 2.0 Authorization Code Flow for Public Apps"
+
+title GHL OAuth 2.0 Authorization Code Flow\n(//for public, approved apps//)
+
+box "//User's Browser//" #LightSteelBlue
+actor User as U
+participant "GHL Web App" as W
+end box
+
+box "//Your Server or CDN//" #LightSteelBlue
+participant "Marketplace App" as C
+end box
+
+box "//GHL's Servers//" #LightSteelBlue
+participant "GHL OAuth Server" as AS
+participant "GHL API Server" as RS
+end box
+
+autonumber "<b>[000]"
+U  ->  W: //login to GHL, go to Apps Marketplace//
+U  <-  W: //show list of approved Apps//
+U  ->  W: //click **Install** on App details page//
+U  <-  W: //request confirmation//
+U  ->  W: //confirm access//
+
+W  -> AS: //**generate Authorization Code**//
+W  <- AS: //**authorization Code**//
+W  ->  C: //**authorization Code**//
+
+C  -> AS: //**exchange Code for Access Token**//
+AS ->  C: **Access Token** + **Refresh Token**
+C  ->  C: //**save tokens for reuse**//
+U  <-  C: //**redirect to Thank You Page**//
+
+...
+
+rnote across
+  potentially after some time has passed
+end note
+
+...
+
+C  -> RS: call API using //**Access Token**//
+RS ->  C: //**API Response**//
+
+@enduml
+

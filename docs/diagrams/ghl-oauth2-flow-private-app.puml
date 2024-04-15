@@ -1,0 +1,43 @@
+@startuml "GHL OAuth 2.0 Authorization Code Flow for Private Apps"
+
+title GHL OAuth 2.0 Authorization Code Flow\n(//for private apps//)
+
+
+actor User as U
+
+box "//Your Server or CDN//" #LightSteelBlue
+participant "Marketplace App" as C
+end box
+
+box "//GHL's Servers//" #LightSteelBlue
+participant "GHL OAuth Server" as AS
+participant "GHL API Server" as RS
+end box
+
+autonumber "<b>[000]"
+U  ->  C: //**Install Marketplace App**//
+C  ->  U: redirect: //**Authorize URL**//
+
+U  -> AS: //**login to GHL** (only if needed)//
+U  -> AS: //select **Location** and/or **Agency**,//\n//approve access//
+
+AS ->  U: //**authorization Code**//
+U  ->  C: //**authorization Code**//
+
+C  -> AS: //**exchange Code for Access Token**//
+AS ->  C: **Access Token** + **Refresh Token**
+C  ->  C: //**save tokens for reuse**//
+
+...
+
+rnote across
+  potentially after some time has passed
+end note
+
+...
+
+C  -> RS: call API using //**Access Token**//
+RS ->  C: //**API Response**//
+
+@enduml
+
