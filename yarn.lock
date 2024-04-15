@@ -124,7 +124,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@cbnsndwch/ghl-app-api@workspace:apps/server"
   dependencies:
-    "@cbnsndwch/ghl-app-contracts": "npm:^0.3.0"
+    "@cbnsndwch/ghl-app-contracts": "npm:^0.3.1"
     "@nestjs/cli": "npm:^10.3.2"
     "@nestjs/common": "npm:^10.3.7"
     "@nestjs/config": "npm:^3.2.2"
@@ -162,7 +162,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cbnsndwch/ghl-app-contracts@npm:^0.3.0, @cbnsndwch/ghl-app-contracts@workspace:libs/contracts":
+"@cbnsndwch/ghl-app-contracts@npm:^0.3.1, @cbnsndwch/ghl-app-contracts@workspace:libs/contracts":
   version: 0.0.0-use.local
   resolution: "@cbnsndwch/ghl-app-contracts@workspace:libs/contracts"
   dependencies:
