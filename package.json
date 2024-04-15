@@ -1,7 +1,7 @@
 {
     "name": "@cbnsndwch/ghl-app",
     "description": "A base template for full stack HighLevel Marketplace apps",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "license": "MIT",
     "private": true,
     "repository": "https://github.com/cbnsndwch/ghl-app",
@@ -22,9 +22,9 @@
         "lint": "turbo run lint",
         "lint:fix": "turbo run lint:fix",
         "test": "turbo run test",
-        "vmajor": "yarn workspaces foreach -v --topological-dev version major",
-        "vminor": "yarn workspaces foreach -v --topological-dev version minor",
-        "vpatch": "yarn workspaces foreach -v --topological-dev version patch",
+        "vmajor": "yarn workspaces foreach -vA --topological-dev version major",
+        "vminor": "yarn workspaces foreach -vA --topological-dev version minor",
+        "vpatch": "yarn workspaces foreach -vA --topological-dev version patch",
         "clog": "conventional-changelog -p angular -i CHANGELOG.md -o changelog-temp.md"
     },
     "devDependencies": {
