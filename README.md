@@ -14,15 +14,20 @@ A base template for full-stack HighLevel Marketplace apps
 
 > &nbsp;
 > :warning: This project requires a recent version of NodeJS installed on your
-> machine. The current LTS version is NodeJS 20.x but you should be OK using
-> NodeJS 18.x until the end of the maintenance period in April 2025.
+> machine. The current Active LTS version is NodeJS 20.x and a transition to
+> NodeJS 22.x is expected on November of 2024.
+>
+> You should be OK using NodeJS 18.x until the end of the maintenance period in
+> April 2025 but I will not be offering support for it.
 >
 > For more information on NodeJS LTS releases, see the [NodeJS Release Schedule].
 > &nbsp;
 
 Create a new repository from this template
 
-<a href="https://github.com/new?template_name=ghl-app-template&template_owner=cbnsndwch"><img src="https://raw.githubusercontent.com/cbnsndwch/ghl-app-template/develop/docs/assets/use-this-template-btn.svg" /></a>
+<a href="https://github.com/new?template_name=ghl-app-template&template_owner=cbnsndwch">
+  <img alt="" src="https://raw.githubusercontent.com/cbnsndwch/ghl-app-template/develop/docs/assets/use-this-template-btn.svg" />
+</a>
 
 Then, clone your new repository on your dev machine and install the dependencies:
 
