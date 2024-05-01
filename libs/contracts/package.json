@@ -1,8 +1,12 @@
 {
     "name": "@cbnsndwch/ghl-app-contracts",
     "description": "Data contracts for GHL Marketplace apps",
-    "version": "0.3.2",
+    "version": "0.3.3",
     "license": "MIT",
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
     "author": {
         "name": "Sergio Leon",
         "url": "https://www.cbnsndwch.io"
@@ -23,7 +27,7 @@
         "build": "tsc -b tsconfig.json",
         "watch": "tsc -b tsconfig.json -w",
         "prepublish": "yarn build --force",
-        "pub": "yarn npm publish",
+        "pub": "npm publish",
         "format": "prettier --write \"src/**/*.ts\"",
         "lint": "eslint \"src/**/*\"",
         "lint:fix": "eslint \"{src,test}/**/*\" --fix"

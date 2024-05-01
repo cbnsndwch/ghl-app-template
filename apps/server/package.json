@@ -1,7 +1,7 @@
 {
     "name": "@cbnsndwch/ghl-app-api",
     "description": "A demo NestJS app showcasing the new GHL Marketplace SSO feature",
-    "version": "0.3.2",
+    "version": "0.3.3",
     "license": "MIT",
     "author": {
         "name": "Sergio Leon",
@@ -20,7 +20,7 @@
         "format": "prettier --write \"src/**/*.ts\""
     },
     "dependencies": {
-        "@cbnsndwch/ghl-app-contracts": "^0.3.2",
+        "@cbnsndwch/ghl-app-contracts": "^0.3.3",
         "@nestjs/common": "^10.3.8",
         "@nestjs/config": "^3.2.2",
         "@nestjs/core": "^10.3.8",
