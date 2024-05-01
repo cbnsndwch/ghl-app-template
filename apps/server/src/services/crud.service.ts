@@ -144,7 +144,10 @@ export abstract class CrudService<
      * @param filter The input with filters to find the record to update
      * @param update The input with the new values to `$set` on the record.
      */
-    async update(filter: FilterQuery<TEntity & Document>, update: TUpdateInput) {
+    async update(
+        filter: FilterQuery<TEntity & Document>,
+        update: TUpdateInput
+    ) {
         const result = await this.model.findOneAndUpdate(
             filter,
             { $set: update },

@@ -5,6 +5,7 @@ module.exports = {
         es6: true,
         node: true
     },
+    ignorePatterns: ['**/*.json', '.eslintrc.*'],
     extends: [
         'plugin:import/errors',
         'plugin:import/warnings',
@@ -16,7 +17,6 @@ module.exports = {
         sourceType: 'module'
     },
     plugins: ['@typescript-eslint', 'import', 'prettier'],
-    ignorePatterns: ['**/*.json', '.eslintrc.js'],
     rules: {
         '@typescript-eslint/adjacent-overload-signatures': 'error',
         '@typescript-eslint/no-empty-function': 'error',
