@@ -31,7 +31,7 @@
         "change-case": "^5.4.4",
         "conventional-changelog-cli": "^4.1.0",
         "http-server": "^14.1.1",
-        "npm-check-updates": "^16.14.18",
+        "npm-check-updates": "^16.14.20",
         "turbo": "latest"
     },
     "packageManager": "yarn@4.1.1"

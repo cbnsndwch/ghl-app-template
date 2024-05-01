@@ -1,7 +1,7 @@
 /**
  * Put the names of packages you don't want NCU to suggest updates for here.
  */
-const reject = [];
+const reject = ['eslint'];
 
 /**
  * @type {import('npm-check-updates').RunOptions}
