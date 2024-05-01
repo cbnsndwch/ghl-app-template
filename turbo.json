@@ -19,6 +19,10 @@
         "test": {
             "dependsOn": ["^test"],
             "outputs": []
+        },
+        "pub": {
+            "dependsOn": ["^pub"],
+            "outputs": []
         }
     }
 }

@@ -7,7 +7,7 @@
     "repository": "https://github.com/cbnsndwch/ghl-app",
     "author": {
         "name": "Sergio Leon",
-        "url": "https://github.com/cbnsndwch"
+        "url": "https://www.cbnsndwch.io"
     },
     "workspaces": {
         "packages": [
@@ -22,6 +22,7 @@
         "lint": "turbo run lint",
         "lint:fix": "turbo run lint:fix",
         "test": "turbo run test",
+        "pub": "turbo run pub",
         "vmajor": "yarn workspaces foreach -vA --topological-dev version major",
         "vminor": "yarn workspaces foreach -vA --topological-dev version minor",
         "vpatch": "yarn workspaces foreach -vA --topological-dev version patch",
