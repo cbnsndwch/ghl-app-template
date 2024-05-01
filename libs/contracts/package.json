@@ -1,7 +1,7 @@
 {
     "name": "@cbnsndwch/ghl-app-contracts",
     "description": "Data contracts for GHL Marketplace apps",
-    "version": "0.3.3",
+    "version": "0.3.4",
     "license": "MIT",
     "publishConfig": {
         "access": "public",
@@ -11,6 +11,11 @@
         "name": "Sergio Leon",
         "url": "https://www.cbnsndwch.io"
     },
+    "keywords": [
+        "ghl",
+        "highlevel",
+        "cbnsndwch"
+    ],
     "main": "lib/index.js",
     "typings": "lib/index.d.ts",
     "files": [
@@ -18,7 +23,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/cbnsndwch/ghl-app.git",
+        "url": "https://github.com/cbnsndwch/ghl-app-template.git",
         "directory": "libs/contracts"
     },
     "scripts": {
