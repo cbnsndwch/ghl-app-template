@@ -15,7 +15,8 @@
          */
         "lib": [
             "ESNext",
-            "DOM"
+            "DOM",
+            "DOM.Iterable"
         ],
         /**
          * Enable experimental support for TC39 stage 2 draft decorators.
