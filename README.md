@@ -18,7 +18,7 @@ A base template for full-stack HighLevel Marketplace apps
 > NodeJS 22.x is expected on November of 2024.
 >
 > You should be OK using NodeJS 18.x until the end of the maintenance period in
-> April 2025 but I will not be offering support for it.
+> April 2025 but I will not be providing support for it.
 >
 > For more information on NodeJS LTS releases, see the [NodeJS Release Schedule].
 > &nbsp;
