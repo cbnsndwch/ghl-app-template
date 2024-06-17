@@ -100,7 +100,7 @@ __metadata:
     "@types/crypto-js": "npm:^4"
     "@types/express": "npm:^4.17.21"
     "@types/lodash": "npm:^4.17.4"
-    "@types/node": "npm:^20.12.12"
+    "@types/node": "npm:^20.14.4"
     "@typescript-eslint/eslint-plugin": "npm:^7.9.0"
     "@typescript-eslint/parser": "npm:^7.9.0"
     axios: "npm:^1.6.8"
@@ -127,7 +127,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@cbnsndwch/ghl-app-contracts@workspace:libs/contracts"
   dependencies:
-    "@types/node": "npm:^20.12.12"
+    "@types/node": "npm:^20.14.4"
     "@typescript-eslint/eslint-plugin": "npm:^7.9.0"
     "@typescript-eslint/parser": "npm:^7.9.0"
     eslint: "npm:^8.57.0"
@@ -1046,12 +1046,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.12.12":
-  version: 20.12.12
-  resolution: "@types/node@npm:20.12.12"
+"@types/node@npm:^20.14.4":
+  version: 20.14.4
+  resolution: "@types/node@npm:20.14.4"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10/e3945da0a3017bdc1f88f15bdfb823f526b2a717bd58d4640082d6eb0bd2794b5c99bfb914b9e9324ec116dce36066990353ed1c777e8a7b0641f772575793c4
+  checksum: 10/ed4a4c0d66853f0d1735956caa9bb7b38e859506539367de5d01d425d0d6415d7de236d564aad88b36599d4224fb510ac1bc6e29d4d0e45530ad253239a181f5
   languageName: node
   linkType: hard
 
