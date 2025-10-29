@@ -31,6 +31,7 @@ import { services } from './services';
             rootPath: `${process.cwd()}/public`,
             // exclude API routes from the static file server
             exclude: ['/api/*', '/graphql'],
+            // eslint-disable-next-line no-empty-character-class
             renderPath: /\/(!:[])/
         }),
         MongooseModule.forRootAsync({
