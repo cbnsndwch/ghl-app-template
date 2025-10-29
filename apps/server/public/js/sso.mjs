@@ -13,7 +13,7 @@ window.sso = window.sso || {
                 if (data.message === 'REQUEST_USER_DATA_RESPONSE') {
                     resolve(data.payload);
                 }
-            });
+            }, { once: true });
         });
 
         const res = await fetch('/api/sso/ghl', {

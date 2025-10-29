@@ -1,0 +1,41 @@
+{
+    "name": "@cbnsndwch/ghl-sso-helper",
+    "description": "SSO helper for GHL Marketplace apps",
+    "version": "0.3.6",
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
+    "main": "lib/index.js",
+    "typings": "lib/index.d.ts",
+    "files": [
+        "lib/**/*"
+    ],
+    "scripts": {
+        "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo",
+        "prebuild": "rimraf lib",
+        "build": "tsc -b tsconfig.json",
+        "watch": "tsc -b tsconfig.json -w",
+        "prepublish": "yarn build --force",
+        "pub": "npm publish",
+        "format": "prettier --write \"src/**/*.ts\"",
+        "lint": "eslint \"src/**/*\"",
+        "lint:fix": "eslint \"{src,test}/**/*\" --fix"
+    },
+    "devDependencies": {
+        "@types/node": "^20.12.12",
+        "@typescript-eslint/eslint-plugin": "^7.9.0",
+        "@typescript-eslint/parser": "^7.9.0",
+        "eslint": "^8.57.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-prettier": "^5.1.3",
+        "mongoose": "^8.4.0",
+        "prettier": "^3.2.5",
+        "rimraf": "5.0.7",
+        "source-map-support": "^0.5.21",
+        "ts-node": "^10.9.2",
+        "tsconfig-paths": "^4.2.0",
+        "typescript": "^5.4.5"
+    }
+}

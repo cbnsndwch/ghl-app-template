@@ -75,3 +75,5 @@ tsconfig.tsbuildinfo
 
 .turbo
 /.yarn/versions
+
+.local

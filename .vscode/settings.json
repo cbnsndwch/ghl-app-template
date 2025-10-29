@@ -37,4 +37,9 @@
         80
     ],
     "markdown-preview-enhanced.plantumlServer": "https://kroki.io/plantuml/svg/",
+    "cSpell.words": [
+        "vmajor",
+        "vminor",
+        "vpatch"
+    ]
 }
