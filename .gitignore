@@ -1,4 +1,4 @@
-# Yarn
+# Yarn (legacy)
 .yarn/*
 !.yarn/patches
 !.yarn/releases
@@ -6,6 +6,11 @@
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+
+# pnpm
+node_modules/
+.pnpm-store/
+pnpm-debug.log*
 
 # Dependencies & compiled output
 **/node_modules

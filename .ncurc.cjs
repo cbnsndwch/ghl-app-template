@@ -12,7 +12,7 @@ module.exports = {
     /**
      * The package manager you use. Can be `npm`, `yarn`, or `pnpm`.
      */
-    packageManager: 'yarn',
+    packageManager: 'pnpm',
 
     /**
      * Whether to run `npm-check-updates` in all workspace directories.
@@ -22,5 +22,5 @@ module.exports = {
     /**
      * Put the names of packages you don't want NCU to suggest updates for here.
      */
-    reject: ['eslint', 'conventional-changelog-cli']
+    reject: ['conventional-changelog-cli']
 };

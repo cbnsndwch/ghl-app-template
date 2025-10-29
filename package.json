@@ -23,17 +23,27 @@
         "lint:fix": "turbo run lint:fix",
         "test": "turbo run test",
         "pub": "turbo run pub",
-        "vmajor": "yarn workspaces foreach -vA --topological-dev version major",
-        "vminor": "yarn workspaces foreach -vA --topological-dev version minor",
-        "vpatch": "yarn workspaces foreach -vA --topological-dev version patch",
+        "vmajor": "pnpm -r --workspace-concurrency=1 exec pnpm version major",
+        "vminor": "pnpm -r --workspace-concurrency=1 exec pnpm version minor",
+        "vpatch": "pnpm -r --workspace-concurrency=1 exec pnpm version patch",
         "clog": "conventional-changelog -p angular -i CHANGELOG.md -o changelog-temp.md"
     },
     "devDependencies": {
+        "@eslint/js": "^9.38.0",
+        "@typescript-eslint/eslint-plugin": "^8.46.2",
+        "@typescript-eslint/parser": "^8.46.2",
         "change-case": "^5.4.4",
         "conventional-changelog-cli": "^4.1.0",
+        "eslint": "^9.38.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-import-resolver-typescript": "^4.4.4",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-prettier": "^5.1.3",
         "http-server": "^14.1.1",
-        "npm-check-updates": "^16.14.20",
-        "turbo": "latest"
+        "npm-check-updates": "^19.1.2",
+        "prettier": "^3.2.5",
+        "turbo": "^2.5.8",
+        "typescript-eslint": "^8.46.2"
     },
-    "packageManager": "yarn@4.1.1"
+    "packageManager": "pnpm@10.20.0"
 }

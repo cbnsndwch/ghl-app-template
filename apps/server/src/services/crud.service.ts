@@ -163,7 +163,7 @@ export abstract class CrudService<
      * @param id The ID of the record to delete
      * @returns The deleted record
      */
-    async delete(id: string) {
+    async delete(id: string): Promise<any> {
         // get the record to delete
         const record = await this.model.findById(id);
 
