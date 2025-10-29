@@ -4,6 +4,7 @@ const tseslint = require('typescript-eslint');
 const prettierConfig = require('eslint-config-prettier');
 const importPlugin = require('eslint-plugin-import');
 const prettierPlugin = require('eslint-plugin-prettier');
+const globals = require('globals');
 
 module.exports = tseslint.config(
     eslint.configs.recommended,
@@ -25,8 +26,8 @@ module.exports = tseslint.config(
                 sourceType: 'module'
             },
             globals: {
-                node: true,
-                jest: true
+                ...globals.node,
+                ...globals.jest
             }
         },
         plugins: {
