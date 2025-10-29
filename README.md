@@ -37,13 +37,24 @@ cd ghl-app-template
 yarn
 ```
 
+> **Note:** Running `yarn` will automatically build all workspace packages (including the contracts library) via the postinstall script.
+
+Before starting the development server, copy the example environment file:
+
+```shell
+cd apps/server
+cp .env.example .env
+```
+
+Edit the `.env` file and configure your GHL Marketplace app settings.
+
 Open the directory in VSCode:
 
 ```shell
 code .
 ```
 
-To start the development server with the debugger attached run the `Debug API` launch configuration. Alternatively, change to the `apps/server` directory and run the following command:
+To start the development server with the debugger attached run the `Debug API` launch configuration. Alternatively, from the `apps/server` directory, run:
 
 ```shell
 yarn dev

@@ -16,6 +16,7 @@
         ]
     },
     "scripts": {
+        "postinstall": "turbo run build",
         "clean": "turbo run clean",
         "build": "turbo run build",
         "format": "turbo run format",
