@@ -16,6 +16,7 @@
         ]
     },
     "scripts": {
+        "postinstall": "turbo run build",
         "clean": "turbo run clean",
         "build": "turbo run build",
         "format": "turbo run format",
@@ -23,9 +24,9 @@
         "lint:fix": "turbo run lint:fix",
         "test": "turbo run test",
         "pub": "turbo run pub",
-        "vmajor": "yarn workspaces foreach -vA --topological-dev version major",
-        "vminor": "yarn workspaces foreach -vA --topological-dev version minor",
-        "vpatch": "yarn workspaces foreach -vA --topological-dev version patch",
+        "vmajor": "pnpm -r exec pnpm version major",
+        "vminor": "pnpm -r exec pnpm version minor",
+        "vpatch": "pnpm -r exec pnpm version patch",
         "clog": "conventional-changelog -p angular -i CHANGELOG.md -o changelog-temp.md"
     },
     "devDependencies": {
@@ -35,5 +36,5 @@
         "npm-check-updates": "^16.14.20",
         "turbo": "latest"
     },
-    "packageManager": "yarn@4.1.1"
+    "packageManager": "pnpm@10.20.0"
 }

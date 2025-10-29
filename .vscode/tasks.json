@@ -10,7 +10,7 @@
             },
             "problemMatcher": [],
             "label": "npm: build",
-            "detail": "yarn workspaces foreach -v --topological-dev --no-private run build"
+            "detail": "pnpm -r --workspace-concurrency=1 run build"
         }
     ]
 }

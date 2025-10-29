@@ -34,8 +34,19 @@ Then, clone your new repository on your dev machine and install the dependencies
 ```shell
 git clone https://github.com/{YOUR_GITHUB_USERNAME}/ghl-app-template
 cd ghl-app-template
-yarn
+pnpm install
 ```
+
+> **Note:** Running `pnpm install` will automatically build all workspace packages (including the contracts library) via the postinstall script.
+
+Before starting the development server, copy the example environment file:
+
+```shell
+cd apps/server
+cp .env.example .env
+```
+
+Edit the `.env` file and configure your GHL Marketplace app settings.
 
 Open the directory in VSCode:
 
@@ -43,10 +54,10 @@ Open the directory in VSCode:
 code .
 ```
 
-To start the development server with the debugger attached run the `Debug API` launch configuration. Alternatively, change to the `apps/server` directory and run the following command:
+To start the development server with the debugger attached run the `Debug API` launch configuration. Alternatively, from the `apps/server` directory, run:
 
 ```shell
-yarn dev
+pnpm dev
 ```
 
 ## Usage

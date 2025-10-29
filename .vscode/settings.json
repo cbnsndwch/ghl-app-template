@@ -13,7 +13,7 @@
     "svg.preview.background": "transparent",
     "debug.inlineValues": "on",
     "vite.autoStart": false,
-    "vite.buildCommand": "yarn build",
+    "vite.buildCommand": "pnpm build",
     "vite.showTerminal": true,
     "vite.port": 5173,
     "explorer.fileNesting.enabled": true,
@@ -29,7 +29,7 @@
         ".gitignore": ".gitkeep,.gitattributes",
         ".prettierrc.json": ".prettierrc.*.json,.prettierignore",
         ".prettierrc": ".prettierignore",
-        "package.json": "package-lock.json,yarn.lock,pnpm-lock.yaml",
+        "package.json": "package-lock.json,pnpm-lock.yaml",
         "tsconfig.json": "tsconfig.*.json,tsconfig.tsbuildinfo",
         "typedoc.config.js": "typedoc.*.jsonc, typedoc.*.json"
     },

@@ -5,7 +5,7 @@
             "name": "Debug API",
             "type": "node",
             "request": "launch",
-            "runtimeExecutable": "yarn",
+            "runtimeExecutable": "pnpm",
             "runtimeArgs": ["dev"],
             "skipFiles": ["<node_internals>/**", "**/node_modules/@nestjs/**"],
             "env": {
@@ -19,7 +19,7 @@
             "type": "node",
             "request": "launch",
             "skipFiles": ["<node_internals>/**"],
-            "runtimeExecutable": "yarn",
+            "runtimeExecutable": "pnpm",
             "cwd": "${workspaceRoot}/apps/web",
             "runtimeArgs": ["start"]
         },
