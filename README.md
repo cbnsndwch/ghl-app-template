@@ -34,10 +34,10 @@ Then, clone your new repository on your dev machine and install the dependencies
 ```shell
 git clone https://github.com/{YOUR_GITHUB_USERNAME}/ghl-app-template
 cd ghl-app-template
-yarn
+pnpm install
 ```
 
-> **Note:** Running `yarn` will automatically build all workspace packages (including the contracts library) via the postinstall script.
+> **Note:** Running `pnpm install` will automatically build all workspace packages (including the contracts library) via the postinstall script.
 
 Before starting the development server, copy the example environment file:
 
@@ -57,7 +57,7 @@ code .
 To start the development server with the debugger attached run the `Debug API` launch configuration. Alternatively, from the `apps/server` directory, run:
 
 ```shell
-yarn dev
+pnpm dev
 ```
 
 ## Usage
