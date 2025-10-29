@@ -57,5 +57,5 @@
         "tsconfig-paths": "^4.2.0",
         "typescript": "^5.4.5"
     },
-    "packageManager": "pnpm@9.0.0"
+    "packageManager": "pnpm@10.20.0"
 }

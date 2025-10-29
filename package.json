@@ -36,5 +36,5 @@
         "npm-check-updates": "^16.14.20",
         "turbo": "latest"
     },
-    "packageManager": "pnpm@9.0.0"
+    "packageManager": "pnpm@10.20.0"
 }
