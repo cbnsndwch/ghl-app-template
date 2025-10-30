@@ -24,10 +24,6 @@
         "lint:fix": "turbo run lint:fix",
         "test": "turbo run test",
         "pub": "turbo run pub",
-        "vmajor": "pnpm -r --workspace-concurrency=1 exec pnpm version major",
-        "vminor": "pnpm -r --workspace-concurrency=1 exec pnpm version minor",
-        "vpatch": "pnpm -r --workspace-concurrency=1 exec pnpm version patch",
-        "clog": "conventional-changelog -p angular -i CHANGELOG.md -o changelog-temp.md",
         "changeset": "changeset",
         "changeset:version": "changeset version",
         "changeset:publish": "changeset publish"
@@ -38,7 +34,6 @@
         "@typescript-eslint/eslint-plugin": "^8.46.2",
         "@typescript-eslint/parser": "^8.46.2",
         "change-case": "^5.4.4",
-        "conventional-changelog-cli": "^4.1.0",
         "eslint": "^9.38.0",
         "eslint-config-prettier": "^10.1.8",
         "eslint-import-resolver-typescript": "^4.4.4",
