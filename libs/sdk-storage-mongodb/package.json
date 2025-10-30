@@ -1,7 +1,7 @@
 {
     "name": "@cbnsndwch/ghl-sdk-storage-mongodb",
     "description": "MongoDB storage adapter for GHL SDK",
-    "version": "1.0.0",
+    "version": "0.5.0",
     "type": "module",
     "license": "MIT",
     "author": {

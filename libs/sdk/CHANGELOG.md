@@ -1,6 +1,6 @@
 # @cbnsndwch/ghl-sdk
 
-## 1.2.0
+## 0.5.0
 
 ### Minor Changes
 
@@ -38,8 +38,8 @@
 - Updated dependencies [46b0e0a]
     - @cbnsndwch/ghl-sdk-core@0.5.0
     - @cbnsndwch/ghl-sdk-storage@0.5.0
-    - @cbnsndwch/ghl-sdk-storage-memory@1.0.0
-    - @cbnsndwch/ghl-sdk-webhooks@1.0.0
+    - @cbnsndwch/ghl-sdk-storage-memory@0.5.0
+    - @cbnsndwch/ghl-sdk-webhooks@0.5.0
 
 ## 1.1.0
 
