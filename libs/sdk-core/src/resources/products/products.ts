@@ -31,6 +31,7 @@ export class Products {
       params: extracted.query,
       headers: { ...extracted.header, ...options?.headers },
       data: requestBody,
+      // TODO: Verify if '__secutiryRequirements' typo exists in upstream SDK/API
       __secutiryRequirements: requirements,
       
       __pathParams: extracted.path,

@@ -3,6 +3,8 @@ import { AxiosInstance, AxiosRequestConfig } from 'axios';
 export type RequestParams = Record<string, any>;
 
 export interface RequestConfig extends AxiosRequestConfig {
+  // TODO: Verify if '__secutiryRequirements' is the correct spelling in upstream SDK/API
+  // This appears to be a typo for '__securityRequirements' but may be intentional
   __secutiryRequirements?: string[];
   __preferredTokenType?: 'company' | 'location';
   __pathParams?: RequestParams;

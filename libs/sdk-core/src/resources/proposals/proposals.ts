@@ -40,6 +40,7 @@ export class Proposals {
       params: extracted.query,
       headers: { ...extracted.header, ...options?.headers },
       
+      // TODO: Verify if '__secutiryRequirements' typo exists in upstream SDK/API
       __secutiryRequirements: requirements,
       __preferredTokenType: options?.preferredTokenType,
       __pathParams: extracted.path,
