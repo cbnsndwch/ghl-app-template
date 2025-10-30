@@ -2,6 +2,8 @@
 
 Shared contracts *(data types)* for HighLevel Marketplace Apps
 
+<iframe src="https://github.com/sponsors/cbnsndwch/card" title="Sponsor cbnsndwch" height="225" width="600" style="border: 0;"></iframe>
+
 ## Installation
 
 This library is published to npm for archival purposes only. The preferred way to use is to clone the app template repository at [cbnsndwch/ghl-app-template], which includes this library and will allow you to
