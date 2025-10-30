@@ -1,56 +1,55 @@
 {
-  "name": "@cbnsndwch/ghl-sdk-webhooks",
-  "version": "1.0.0",
-  "description": "Webhook utilities for GHL SDK",
-  "license": "MIT",
-  "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
+    "name": "@cbnsndwch/ghl-sdk-webhooks",
+    "description": "Webhook utilities for GHL SDK",
+    "version": "0.3.6",
+    "type": "module",
+    "license": "MIT",
+    "scripts": {
+        "clean": "rimraf dist",
+        "prebuild": "pnpm clean",
+        "build": "tsc",
+        "watch": "tsc -w",
+        "format": "prettier --write \"src/**/*.ts\"",
+        "lint": "eslint \"src/**/*\"",
+        "lint:fix": "eslint \"src/**/*\" --fix"
     },
-    "./adapters/express": {
-      "types": "./dist/adapters/express.d.ts",
-      "default": "./dist/adapters/express.js"
+    "dependencies": {
+        "@cbnsndwch/ghl-sdk-storage": "workspace:*"
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.5",
+        "@types/node": "^20.0.0",
+        "express": "^5.1.0",
+        "rimraf": "^6.0.1",
+        "typescript": "^5.9.3"
+    },
+    "peerDependencies": {
+        "@cbnsndwch/ghl-sdk-storage": "^1.0.0"
+    },
+    "peerDependenciesMeta": {
+        "express": {
+            "optional": true
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        },
+        "./adapters/express": {
+            "types": "./dist/adapters/express.d.ts",
+            "default": "./dist/adapters/express.js"
+        }
+    },
+    "engines": {
+        "node": ">=22"
+    },
+    "publishConfig": {
+        "access": "public"
     }
-  },
-  "files": [
-    "dist/**/*.js",
-    "dist/**/*.d.ts"
-  ],
-  "scripts": {
-    "clean": "rimraf dist",
-    "prebuild": "pnpm clean",
-    "build": "tsc",
-    "watch": "tsc -w",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "eslint \"src/**/*\"",
-    "lint:fix": "eslint \"src/**/*\" --fix"
-  },
-  "dependencies": {
-    "@cbnsndwch/ghl-sdk-storage": "workspace:*"
-  },
-  "devDependencies": {
-    "@types/express": "^5.0.5",
-    "@types/node": "^20.0.0",
-    "express": "^5.1.0",
-    "rimraf": "^6.0.1",
-    "typescript": "^5.9.3"
-  },
-  "peerDependencies": {
-    "@cbnsndwch/ghl-sdk-storage": "^1.0.0"
-  },
-  "peerDependenciesMeta": {
-    "express": {
-      "optional": true
-    }
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
 }

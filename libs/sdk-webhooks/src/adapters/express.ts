@@ -1,4 +1,5 @@
-import { Request, Response, NextFunction } from 'express';
+import type { Request, Response } from 'express';
+
 import { WebhookManager } from '../webhook-manager.js';
 
 /**
@@ -7,26 +8,29 @@ import { WebhookManager } from '../webhook-manager.js';
  * @returns Express middleware function
  */
 export function createExpressMiddleware(manager: WebhookManager) {
-  return async (req: Request, res: Response, next: NextFunction) => {
-    try {
-      const signature = req.headers['x-wh-signature'] as string | undefined;
-      const event = req.body;
+    return async (req: Request, res: Response) => {
+        try {
+            const signature = req.headers['x-wh-signature'] as
+                | string
+                | undefined;
+            const event = req.body;
 
-      const context = await manager.process(event, signature);
+            const context = await manager.process(event, signature);
 
-      // Attach context to request for downstream middleware
-      (req as any).webhookContext = context;
+            // Attach context to request for downstream middleware
+            (req as any).webhookContext = context;
 
-      // Send success response
-      res.status(200).json({ success: true });
-    } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      
-      // Send error response
-      res.status(400).json({ 
-        success: false, 
-        error: errorMessage
-      });
-    }
-  };
+            // Send success response
+            res.status(200).json({ success: true });
+        } catch (error) {
+            const errorMessage =
+                error instanceof Error ? error.message : 'Unknown error';
+
+            // Send error response
+            res.status(400).json({
+                success: false,
+                error: errorMessage
+            });
+        }
+    };
 }

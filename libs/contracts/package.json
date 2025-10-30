@@ -16,11 +16,6 @@
         "highlevel",
         "cbnsndwch"
     ],
-    "main": "lib/index.js",
-    "typings": "lib/index.d.ts",
-    "files": [
-        "lib/**/*"
-    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/cbnsndwch/ghl-app-template.git",
@@ -57,5 +52,10 @@
         "typescript": "^5.9.3",
         "typescript-eslint": "^8.46.2"
     },
+    "files": [
+        "lib"
+    ],
+    "main": "lib/index.js",
+    "typings": "lib/index.d.ts",
     "packageManager": "pnpm@10.20.0"
 }
