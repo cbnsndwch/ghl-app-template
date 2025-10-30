@@ -99,6 +99,10 @@ module.exports = tseslint.config(
                 'error',
                 { vars: 'all', args: 'after-used', ignoreRestSiblings: false }
             ],
+            '@typescript-eslint/no-empty-object-type': [
+                'error',
+                { allowInterfaces: 'always' }
+            ],
             '@typescript-eslint/interface-name-prefix': 'off',
             '@typescript-eslint/explicit-function-return-type': 'off',
             '@typescript-eslint/explicit-module-boundary-types': 'off',
