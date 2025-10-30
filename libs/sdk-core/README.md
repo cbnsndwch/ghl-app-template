@@ -2,7 +2,7 @@
 
 Core API client for HighLevel Public APIs.
 
-<iframe src="https://github.com/sponsors/cbnsndwch/card" title="Sponsor cbnsndwch" height="225" width="600" style="border: 0;"></iframe>
+[![Sponsor cbnsndwch](https://img.shields.io/badge/Sponsor-%E2%9D%A4-red?logo=github)](https://github.com/sponsors/cbnsndwch)
 
 ## Installation
 
