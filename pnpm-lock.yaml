@@ -257,6 +257,116 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
+  libs/sdk-core:
+    dependencies:
+      axios:
+        specifier: ^1.13.1
+        version: 1.13.1
+    devDependencies:
+      '@types/node':
+        specifier: ^20.0.0
+        version: 20.19.24
+      rimraf:
+        specifier: ^6.0.1
+        version: 6.0.1
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
+  libs/sdk-storage:
+    devDependencies:
+      '@types/node':
+        specifier: ^20.0.0
+        version: 20.19.24
+      rimraf:
+        specifier: ^6.0.1
+        version: 6.0.1
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
+  libs/sdk-storage-memory:
+    dependencies:
+      '@cbnsndwch/ghl-sdk-storage':
+        specifier: workspace:*
+        version: link:../sdk-storage
+    devDependencies:
+      '@types/node':
+        specifier: ^20.0.0
+        version: 20.19.24
+      rimraf:
+        specifier: ^6.0.1
+        version: 6.0.1
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
+  libs/sdk-storage-mongodb:
+    dependencies:
+      '@cbnsndwch/ghl-sdk-storage':
+        specifier: workspace:*
+        version: link:../sdk-storage
+      mongodb:
+        specifier: ^6.20.0
+        version: 6.20.0
+    devDependencies:
+      '@types/node':
+        specifier: ^20.0.0
+        version: 20.19.24
+      rimraf:
+        specifier: ^6.0.1
+        version: 6.0.1
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
+  libs/sdk-unified:
+    dependencies:
+      '@cbnsndwch/ghl-sdk-core':
+        specifier: workspace:*
+        version: link:../sdk-core
+      '@cbnsndwch/ghl-sdk-storage':
+        specifier: workspace:*
+        version: link:../sdk-storage
+      '@cbnsndwch/ghl-sdk-storage-memory':
+        specifier: workspace:*
+        version: link:../sdk-storage-memory
+      '@cbnsndwch/ghl-sdk-webhooks':
+        specifier: workspace:*
+        version: link:../sdk-webhooks
+    devDependencies:
+      '@types/node':
+        specifier: ^20.0.0
+        version: 20.19.24
+      rimraf:
+        specifier: ^6.0.1
+        version: 6.0.1
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
+  libs/sdk-webhooks:
+    dependencies:
+      '@cbnsndwch/ghl-sdk-storage':
+        specifier: workspace:*
+        version: link:../sdk-storage
+    devDependencies:
+      '@types/express':
+        specifier: ^5.0.5
+        version: 5.0.5
+      '@types/node':
+        specifier: ^20.0.0
+        version: 20.19.24
+      express:
+        specifier: ^5.1.0
+        version: 5.1.0
+      rimraf:
+        specifier: ^6.0.1
+        version: 6.0.1
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
 packages:
 
   '@angular-devkit/core@19.2.15':
