@@ -1,5 +1,11 @@
 # @cbnsndwch/ghl-app-contracts
 
+## 0.5.1
+
+### Patch Changes
+
+- 7a6158e: fix github sponsors badge
+
 ## 0.5.0
 
 ### Minor Changes
