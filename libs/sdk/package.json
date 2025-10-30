@@ -1,0 +1,50 @@
+{
+    "name": "@cbnsndwch/ghl-api-client",
+    "version": "0.3.6",
+    "description": "Serge's SDK for HighLevel Public APIs",
+    "license": "MIT",
+    "author": "HighLevel",
+    "homepage": "https://github.com/GoHighLevel/highlevel-api-sdk#readme",
+    "bugs": {
+        "url": "https://github.com/GoHighLevel/highlevel-api-sdk/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GoHighLevel/highlevel-api-sdk.git"
+    },
+    "keywords": [
+        "highlevel",
+        "gohighlevel",
+        "api",
+        "sdk",
+        "ghl",
+        "typescript",
+        "javascript"
+    ],
+    "scripts": {
+        "clean": "rimraf dist",
+        "build": "tsc",
+        "prebuild": "pnpm clean",
+        "prepare": "pnpm build"
+    },
+    "dependencies": {
+        "axios": "^1.13.1",
+        "express": "^5.1.0",
+        "mongodb": "^6.20.0"
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.5",
+        "@types/node": "^20.0.0",
+        "rimraf": "^6.0.1",
+        "typescript": "^5.9.3"
+    },
+    "engines": {
+        "node": ">=22.0.0"
+    },
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist/**/*.js",
+        "dist/**/*.d.ts"
+    ]
+}
