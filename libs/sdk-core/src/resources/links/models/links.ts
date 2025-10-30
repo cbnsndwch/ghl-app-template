@@ -1,33 +1,32 @@
 // Links Models
 
 export interface LinkSchema {
-  id?: string;
-  name?: string;
-  redirectTo?: string;
-  fieldKey?: string;
-  locationId?: string;
+    id?: string;
+    name?: string;
+    redirectTo?: string;
+    fieldKey?: string;
+    locationId?: string;
 }
 
 export interface GetLinksSuccessfulResponseDto {
-  links?: LinkSchema[];
+    links?: LinkSchema[];
 }
 
 export interface LinksDto {
-  locationId: string;
-  name: string;
-  redirectTo: string;
+    locationId: string;
+    name: string;
+    redirectTo: string;
 }
 
 export interface GetLinkSuccessfulResponseDto {
-  link?: LinkSchema;
+    link?: LinkSchema;
 }
 
 export interface LinkUpdateDto {
-  name: string;
-  redirectTo: string;
+    name: string;
+    redirectTo: string;
 }
 
 export interface DeleteLinksSuccessfulResponseDto {
-  succeded?: boolean;
+    succeded?: boolean;
 }
-

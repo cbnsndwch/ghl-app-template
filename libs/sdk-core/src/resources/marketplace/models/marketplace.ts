@@ -1,47 +1,46 @@
 // Marketplace Models
 
 export interface RaiseChargeBodyDTO {
-  appId: string;
-  meterId: string;
-  eventId: string;
-  userId?: string;
-  locationId: string;
-  companyId: string;
-  description: string;
-  price?: number;
-  units: string;
-  eventTime?: string;
+    appId: string;
+    meterId: string;
+    eventId: string;
+    userId?: string;
+    locationId: string;
+    companyId: string;
+    description: string;
+    price?: number;
+    units: string;
+    eventTime?: string;
 }
 
 export interface DeleteIntegrationBodyDto {
-  companyId?: string;
-  locationId?: string;
-  reason?: string;
+    companyId?: string;
+    locationId?: string;
+    reason?: string;
 }
 
 export interface DeleteIntegrationResponse {
-  success: boolean;
+    success: boolean;
 }
 
 export interface WhitelabelDetailsDTO {
-  domain: string;
-  logoUrl: string;
+    domain: string;
+    logoUrl: string;
 }
 
 export interface InstallerDetailsDTO {
-  companyId: string;
-  locationId?: string;
-  companyName: string;
-  companyEmail: string;
-  companyOwnerFullName?: string;
-  userId: string;
-  isWhitelabelCompany: boolean;
-  companyHighLevelPlan?: string;
-  marketplaceAppPlanId?: string;
-  whitelabelDetails?: any;
+    companyId: string;
+    locationId?: string;
+    companyName: string;
+    companyEmail: string;
+    companyOwnerFullName?: string;
+    userId: string;
+    isWhitelabelCompany: boolean;
+    companyHighLevelPlan?: string;
+    marketplaceAppPlanId?: string;
+    whitelabelDetails?: any;
 }
 
 export interface GetInstallerDetailsResponseDTO {
-  installationDetails: any;
+    installationDetails: any;
 }
-

@@ -3,8 +3,8 @@
  * Used for OAuth flows and session management
  */
 export enum UserType {
-  Company = 'Company',
-  Location = 'Location'
+    Company = 'Company',
+    Location = 'Location'
 }
 
 /**

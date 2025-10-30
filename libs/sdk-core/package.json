@@ -1,43 +1,43 @@
 {
-  "name": "@cbnsndwch/ghl-sdk-core",
-  "version": "1.0.0",
-  "description": "Core API client for HighLevel Public APIs",
-  "license": "MIT",
-  "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
+    "name": "@cbnsndwch/ghl-sdk-core",
+    "description": "Core API client for HighLevel Public APIs",
+    "type": "module",
+    "version": "0.3.6",
+    "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "clean": "rimraf dist",
+        "prebuild": "pnpm clean",
+        "build": "tsc",
+        "watch": "tsc -w",
+        "format": "prettier --write \"src/**/*.ts\"",
+        "lint": "eslint \"src/**/*\"",
+        "lint:fix": "eslint \"src/**/*\" --fix"
+    },
+    "dependencies": {
+        "@cbnsndwch/ghl-app-contracts": "workspace:*",
+        "axios": "^1.13.1"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "rimraf": "^6.0.1",
+        "typescript": "^5.9.3"
+    },
+    "engines": {
+        "node": ">=22"
+    },
+    "files": [
+        "dist",
+        "README.md"
+    ],
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        }
     }
-  },
-  "files": [
-    "dist/**/*.js",
-    "dist/**/*.d.ts",
-    "README.md"
-  ],
-  "scripts": {
-    "clean": "rimraf dist",
-    "prebuild": "pnpm clean",
-    "build": "tsc",
-    "watch": "tsc -w",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "eslint \"src/**/*\"",
-    "lint:fix": "eslint \"src/**/*\" --fix"
-  },
-  "dependencies": {
-    "axios": "^1.13.1"
-  },
-  "devDependencies": {
-    "@types/node": "^20.0.0",
-    "rimraf": "^6.0.1",
-    "typescript": "^5.9.3"
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
 }

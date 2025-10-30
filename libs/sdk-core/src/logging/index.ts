@@ -5,4 +5,4 @@ export { Logger } from './logger.js';
 
 // Re-export everything for convenience
 export * from './log-level.js';
-export * from './logger.js'; 
+export * from './logger.js';

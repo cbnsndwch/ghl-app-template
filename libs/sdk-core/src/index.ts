@@ -3,11 +3,11 @@ export { HighLevel } from './HighLevel.js';
 
 // Types and interfaces
 export type {
-  HighLevelConfig,
-  TokenProvider,
-  ValidConfig,
-  RequestInterceptor,
-  ResponseInterceptor,
+    HighLevelConfig,
+    TokenProvider,
+    ValidConfig,
+    RequestInterceptor,
+    ResponseInterceptor
 } from './types.js';
 
 // Error classes
@@ -17,7 +17,12 @@ export { GHLError } from './errors.js';
 export { UserType, type UserTypeValue } from './constants/index.js';
 
 // Logging
-export { Logger, LogLevel, type LogLevelType, type LogLevelString } from './logging/index.js';
+export {
+    Logger,
+    LogLevel,
+    type LogLevelType,
+    type LogLevelString
+} from './logging/index.js';
 
 // Individual resource exports for tree-shaking
 export { Associations } from './resources/associations/associations.js';
