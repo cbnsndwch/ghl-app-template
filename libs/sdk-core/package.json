@@ -2,7 +2,7 @@
     "name": "@cbnsndwch/ghl-sdk-core",
     "description": "Core API client for HighLevel Public APIs",
     "type": "module",
-    "version": "0.4.0",
+    "version": "0.5.0",
     "license": "MIT",
     "author": {
         "name": "Sergio Leon",
