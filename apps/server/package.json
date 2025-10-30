@@ -23,7 +23,7 @@
         "lint:fix": "eslint \"src/**/*.ts\" --fix"
     },
     "dependencies": {
-        "@cbnsndwch/ghl-app-contracts": "^0.3.6",
+        "@cbnsndwch/ghl-app-contracts": "^0.4.0",
         "@nestjs/common": "^11.1.8",
         "@nestjs/config": "^4.0.2",
         "@nestjs/core": "^11.1.8",

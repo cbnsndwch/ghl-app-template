@@ -1,7 +1,7 @@
 {
     "name": "@cbnsndwch/ghl-sdk-storage-memory",
     "description": "In-memory storage adapter for GHL SDK",
-    "version": "0.3.6",
+    "version": "0.4.0",
     "type": "module",
     "license": "MIT",
     "author": {
@@ -40,7 +40,7 @@
         "typescript": "^5.9.3"
     },
     "peerDependencies": {
-        "@cbnsndwch/ghl-sdk-storage": "^1.0.0"
+        "@cbnsndwch/ghl-sdk-storage": "^0.4.0"
     },
     "files": [
         "dist",
