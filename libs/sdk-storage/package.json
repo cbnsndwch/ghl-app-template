@@ -12,6 +12,11 @@
         "name": "Sergio Leon",
         "url": "https://www.cbnsndwch.io"
     },
+    "keywords": [
+        "ghl",
+        "highlevel",
+        "cbnsndwch"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/cbnsndwch/ghl-app-template.git",
@@ -32,7 +37,8 @@
         "typescript": "^5.9.3"
     },
     "files": [
-        "dist"
+        "dist",
+        "README.md"
     ],
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -44,5 +50,6 @@
     },
     "engines": {
         "node": ">=22"
-    }
+    },
+    "packageManager": "pnpm@10.20.0"
 }

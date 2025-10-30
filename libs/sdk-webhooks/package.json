@@ -4,6 +4,20 @@
     "version": "0.3.6",
     "type": "module",
     "license": "MIT",
+    "author": {
+        "name": "Sergio Leon",
+        "url": "https://www.cbnsndwch.io"
+    },
+    "keywords": [
+        "ghl",
+        "highlevel",
+        "cbnsndwch"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cbnsndwch/ghl-app-template.git",
+        "directory": "libs/sdk-webhooks"
+    },
     "scripts": {
         "clean": "rimraf dist",
         "prebuild": "pnpm clean",
@@ -32,7 +46,8 @@
         }
     },
     "files": [
-        "dist"
+        "dist",
+        "README.md"
     ],
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -50,6 +65,8 @@
         "node": ">=22"
     },
     "publishConfig": {
-        "access": "public"
-    }
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
+    "packageManager": "pnpm@10.20.0"
 }

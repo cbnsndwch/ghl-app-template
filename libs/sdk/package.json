@@ -1,45 +1,61 @@
 {
-  "name": "@cbnsndwch/ghl-sdk",
-  "version": "1.0.0",
-  "description": "Unified SDK for HighLevel - meta-package with all modules",
-  "license": "MIT",
-  "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    }
-  },
-  "files": [
-    "dist/**/*.js",
-    "dist/**/*.d.ts"
-  ],
-  "scripts": {
-    "clean": "rimraf dist",
-    "prebuild": "pnpm clean",
-    "build": "tsc",
-    "watch": "tsc -w",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "eslint \"src/**/*\"",
-    "lint:fix": "eslint \"src/**/*\" --fix"
-  },
-  "dependencies": {
-    "@cbnsndwch/ghl-sdk-core": "workspace:*",
-    "@cbnsndwch/ghl-sdk-storage": "workspace:*",
-    "@cbnsndwch/ghl-sdk-storage-memory": "workspace:*",
-    "@cbnsndwch/ghl-sdk-webhooks": "workspace:*"
-  },
-  "devDependencies": {
-    "@types/node": "^20.0.0",
-    "rimraf": "^6.0.1",
-    "typescript": "^5.9.3"
-  },
-  "engines": {
-    "node": ">=22"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@cbnsndwch/ghl-sdk",
+    "version": "1.0.0",
+    "description": "Unified SDK for HighLevel - meta-package with all modules",
+    "license": "MIT",
+    "type": "module",
+    "author": {
+        "name": "Sergio Leon",
+        "url": "https://www.cbnsndwch.io"
+    },
+    "keywords": [
+        "ghl",
+        "highlevel",
+        "cbnsndwch"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cbnsndwch/ghl-app-template.git",
+        "directory": "libs/sdk"
+    },
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        }
+    },
+    "files": [
+        "dist",
+        "README.md"
+    ],
+    "scripts": {
+        "clean": "rimraf dist",
+        "prebuild": "pnpm clean",
+        "build": "tsc",
+        "watch": "tsc -w",
+        "format": "prettier --write \"src/**/*.ts\"",
+        "lint": "eslint \"src/**/*\"",
+        "lint:fix": "eslint \"src/**/*\" --fix"
+    },
+    "dependencies": {
+        "@cbnsndwch/ghl-sdk-core": "workspace:*",
+        "@cbnsndwch/ghl-sdk-storage": "workspace:*",
+        "@cbnsndwch/ghl-sdk-storage-memory": "workspace:*",
+        "@cbnsndwch/ghl-sdk-webhooks": "workspace:*"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "rimraf": "^6.0.1",
+        "typescript": "^5.9.3"
+    },
+    "engines": {
+        "node": ">=22"
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
+    "packageManager": "pnpm@10.20.0"
 }

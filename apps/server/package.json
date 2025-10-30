@@ -3,6 +3,7 @@
     "description": "A demo NestJS app showcasing the new GHL Marketplace SSO feature",
     "version": "0.3.6",
     "license": "MIT",
+    "private": true,
     "author": {
         "name": "Sergio Leon",
         "url": "https://www.cbnsndwch.io"
