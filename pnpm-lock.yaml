@@ -285,6 +285,41 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
+  libs/sdk-storage-memory:
+    dependencies:
+      '@cbnsndwch/ghl-sdk-storage':
+        specifier: workspace:*
+        version: link:../sdk-storage
+    devDependencies:
+      '@types/node':
+        specifier: ^20.0.0
+        version: 20.19.24
+      rimraf:
+        specifier: ^6.0.1
+        version: 6.0.1
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
+  libs/sdk-storage-mongodb:
+    dependencies:
+      '@cbnsndwch/ghl-sdk-storage':
+        specifier: workspace:*
+        version: link:../sdk-storage
+      mongodb:
+        specifier: ^6.20.0
+        version: 6.20.0
+    devDependencies:
+      '@types/node':
+        specifier: ^20.0.0
+        version: 20.19.24
+      rimraf:
+        specifier: ^6.0.1
+        version: 6.0.1
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
 packages:
 
   '@angular-devkit/core@19.2.15':
