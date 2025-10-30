@@ -1,12 +1,17 @@
 // @ts-check
-const eslint = require('@eslint/js');
-const tseslint = require('typescript-eslint');
-const prettierConfig = require('eslint-config-prettier');
-const importPlugin = require('eslint-plugin-import');
-const prettierPlugin = require('eslint-plugin-prettier');
-const globals = require('globals');
+import eslint from '@eslint/js';
+import tseslint from 'typescript-eslint';
+import prettierConfig from 'eslint-config-prettier';
+import importPlugin from 'eslint-plugin-import';
+import prettierPlugin from 'eslint-plugin-prettier';
+import globals from 'globals';
+import { fileURLToPath } from 'node:url';
+import { dirname } from 'node:path';
 
-module.exports = tseslint.config(
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+export default tseslint.config(
     eslint.configs.recommended,
     tseslint.configs.recommended,
     prettierConfig,
