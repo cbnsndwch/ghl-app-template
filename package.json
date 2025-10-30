@@ -27,9 +27,13 @@
         "vmajor": "pnpm -r --workspace-concurrency=1 exec pnpm version major",
         "vminor": "pnpm -r --workspace-concurrency=1 exec pnpm version minor",
         "vpatch": "pnpm -r --workspace-concurrency=1 exec pnpm version patch",
-        "clog": "conventional-changelog -p angular -i CHANGELOG.md -o changelog-temp.md"
+        "clog": "conventional-changelog -p angular -i CHANGELOG.md -o changelog-temp.md",
+        "changeset": "changeset",
+        "changeset:version": "changeset version",
+        "changeset:publish": "changeset publish"
     },
     "devDependencies": {
+        "@changesets/cli": "^2.29.7",
         "@eslint/js": "^9.38.0",
         "@typescript-eslint/eslint-plugin": "^8.46.2",
         "@typescript-eslint/parser": "^8.46.2",
