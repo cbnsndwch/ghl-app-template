@@ -1,0 +1,1 @@
+great! let's run a full `build` / `format` / `lint` / `test` flow for the entire repo to ensure everything is in order

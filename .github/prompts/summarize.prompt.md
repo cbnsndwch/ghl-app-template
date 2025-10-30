@@ -1,0 +1,1 @@
+now summarize this conversation and write it to `.github\prompts\next-step.prompt.md` so we can start a new session with a clean context window. Keep the essential information we'll need to continue the conversation, but remove any unnecessary details or tangents.

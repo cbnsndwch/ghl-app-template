@@ -42,6 +42,7 @@ lerna-debug.log*
 *.launch
 .settings/
 *.sublime-workspace
+/.yarn/versions
 
 # IDE - VSCode
 .vscode/*
@@ -64,14 +65,8 @@ tsconfig.tsbuildinfo
 
 # Local docs and tests
 .local
-/apps/web/.yarn/cache/
-/apps/web/.env
-/changelog-temp.md
+.turbo
 
 .docker/*.env
+.github/prompts/next-step.prompt.md
 
-/tools/dependabot-branches.txt
-/packages/portal-components/storybook-static
-
-.turbo
-/.yarn/versions
