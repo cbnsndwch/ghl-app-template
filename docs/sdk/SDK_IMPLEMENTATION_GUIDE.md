@@ -144,7 +144,7 @@ export class HighLevel {
 ```json
 {
   "name": "@cbnsndwch/ghl-sdk-core",
-  "version": "1.0.0",
+  "version": "0.3.6",
   "description": "Core API client for HighLevel Public APIs",
   "license": "MIT",
   "type": "module",
@@ -361,7 +361,7 @@ export { BaseSessionStorage } from './base-storage';
 ```json
 {
   "name": "@cbnsndwch/ghl-sdk-storage",
-  "version": "1.0.0",
+  "version": "0.3.6",
   "description": "Storage abstractions for GHL SDK",
   "license": "MIT",
   "type": "module",
@@ -482,7 +482,7 @@ mkdir -p libs/sdk-webhooks/src/{adapters}
 ```json
 {
   "name": "@cbnsndwch/ghl-sdk-webhooks",
-  "version": "1.0.0",
+  "version": "0.3.6",
   "description": "Webhook utilities for GHL SDK",
   "license": "MIT",
   "type": "module",
@@ -575,7 +575,7 @@ export { HighLevel as default } from '@cbnsndwch/ghl-sdk-core';
 ```json
 {
   "name": "@cbnsndwch/ghl-sdk",
-  "version": "1.0.0",
+  "version": "0.3.6",
   "description": "Unified SDK for HighLevel (meta-package)",
   "license": "MIT",
   "type": "module",

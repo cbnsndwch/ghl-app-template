@@ -163,7 +163,7 @@ libs/sdk-core/
     "typescript": "^5.9.3"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22"
   },
   "publishConfig": {
     "access": "public"
@@ -410,7 +410,7 @@ libs/sdk-storage/
     "typescript": "^5.9.3"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22"
   },
   "publishConfig": {
     "access": "public"
@@ -656,7 +656,7 @@ libs/sdk-storage-memory/
     "@cbnsndwch/ghl-sdk-storage": "^0.3.6"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22"
   },
   "publishConfig": {
     "access": "public"
@@ -789,7 +789,7 @@ libs/sdk-storage-mongodb/
     "mongodb": "^6.0.0"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22"
   },
   "publishConfig": {
     "access": "public"
@@ -1007,7 +1007,7 @@ libs/sdk-webhooks/
     }
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22"
   },
   "publishConfig": {
     "access": "public"
@@ -1332,7 +1332,7 @@ libs/sdk-unified/
     "typescript": "^5.9.3"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22"
   },
   "publishConfig": {
     "access": "public"
