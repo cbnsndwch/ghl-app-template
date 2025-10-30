@@ -60,8 +60,8 @@ importers:
   apps/server:
     dependencies:
       '@cbnsndwch/ghl-app-contracts':
-        specifier: ^0.3.6
-        version: 0.3.6
+        specifier: workspace:*
+        version: link:../../libs/contracts
       '@nestjs/common':
         specifier: ^11.1.8
         version: 11.1.8(reflect-metadata@0.2.2)(rxjs@7.8.2)
@@ -392,9 +392,6 @@ packages:
 
   '@borewit/text-codec@0.1.1':
     resolution: {integrity: sha512-5L/uBxmjaCIX5h8Z+uu+kA9BQLkc/Wl06UGR5ajNRxu+/XjonB5i8JpgFMrPj3LXTCPA0pv8yxUvbUi+QthGGA==}
-
-  '@cbnsndwch/ghl-app-contracts@0.3.6':
-    resolution: {integrity: sha512-ClUl0nvLTuwi2zaxZm7ON7YHmwsSFFVWkIBggT1+SN5MuLsPhnVpUI/9IqPrewCTeloSiDav02COzAAGMPJj8Q==}
 
   '@changesets/apply-release-plan@7.0.13':
     resolution: {integrity: sha512-BIW7bofD2yAWoE8H4V40FikC+1nNFEKBisMECccS16W1rt6qqhNTBDmIw5HaqmMgtLNz9e7oiALiEUuKrQ4oHg==}
@@ -3410,8 +3407,6 @@ snapshots:
   '@babel/runtime@7.28.4': {}
 
   '@borewit/text-codec@0.1.1': {}
-
-  '@cbnsndwch/ghl-app-contracts@0.3.6': {}
 
   '@changesets/apply-release-plan@7.0.13':
     dependencies:
