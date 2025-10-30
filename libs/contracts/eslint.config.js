@@ -8,7 +8,7 @@ const globals = require('globals');
 
 module.exports = tseslint.config(
     eslint.configs.recommended,
-    ...tseslint.configs.recommended,
+    tseslint.configs.recommended,
     prettierConfig,
     {
         ignores: [
@@ -24,12 +24,12 @@ module.exports = tseslint.config(
             parser: tseslint.parser,
             parserOptions: {
                 project: './tsconfig.json',
+                tsconfigRootDir: __dirname,
                 sourceType: 'module'
             },
             globals: {
                 ...globals.node,
-                ...globals.browser,
-                ...globals.es6
+                ...globals.browser
             }
         },
         plugins: {
