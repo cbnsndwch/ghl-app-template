@@ -2,6 +2,8 @@
 
 Unified SDK for HighLevel - meta-package that includes all modular SDK components.
 
+<iframe src="https://github.com/sponsors/cbnsndwch/card" title="Sponsor cbnsndwch" height="225" width="600" style="border: 0;"></iframe>
+
 ## Installation
 
 ```bash
@@ -11,6 +13,7 @@ pnpm add @cbnsndwch/ghl-sdk
 ## What's Included
 
 This meta-package includes:
+
 - `@cbnsndwch/ghl-sdk-core` - Core API client
 - `@cbnsndwch/ghl-sdk-storage` - Storage interfaces
 - `@cbnsndwch/ghl-sdk-storage-memory` - Memory storage adapter
@@ -126,6 +129,7 @@ Total when using everything: ~2.5MB (similar to original monolithic SDK)
 This package maintains backwards compatibility. The main change:
 
 **Before:**
+
 ```typescript
 import { HighLevel, MongoDBSessionStorage } from '@cbnsndwch/ghl-api-client';
 
@@ -137,6 +141,7 @@ const ghl = new HighLevel({
 ```
 
 **After:**
+
 ```typescript
 import { HighLevel } from '@cbnsndwch/ghl-sdk';
 import { MongoDBSessionStorage } from '@cbnsndwch/ghl-sdk-storage-mongodb';

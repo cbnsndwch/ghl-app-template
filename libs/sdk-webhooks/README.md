@@ -2,6 +2,8 @@
 
 Webhook utilities for GHL SDK - framework-agnostic with adapters for popular frameworks.
 
+<iframe src="https://github.com/sponsors/cbnsndwch/card" title="Sponsor cbnsndwch" height="225" width="600" style="border: 0;"></iframe>
+
 ## Installation
 
 ```bash
@@ -115,6 +117,7 @@ createExpressMiddleware(manager: WebhookManager)
 ```
 
 Returns Express middleware that:
+
 - Extracts webhook event from `req.body`
 - Extracts signature from `x-wh-signature` header
 - Processes the event through the manager
