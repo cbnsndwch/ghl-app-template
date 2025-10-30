@@ -1,17 +1,28 @@
-// HighLevel SDK - Main wrapper class
-export { HighLevel, type HighLevelConfig, type ValidConfig, GHLError, type RequestInterceptor, type ResponseInterceptor } from './HighLevel';
+/**
+ * @cbnsndwch/ghl-sdk - Unified SDK Package
+ *
+ * Meta-package that re-exports all modular SDK packages for backwards compatibility
+ * and convenience. Use this if you want everything in one package.
+ *
+ * For smaller bundles, import directly from specific packages:
+ * - @cbnsndwch/ghl-sdk-core - API client only
+ * - @cbnsndwch/ghl-sdk-storage - Storage interfaces
+ * - @cbnsndwch/ghl-sdk-storage-memory - Memory storage adapter
+ * - @cbnsndwch/ghl-sdk-storage-mongodb - MongoDB storage adapter
+ * - @cbnsndwch/ghl-sdk-webhooks - Webhook utilities
+ */
 
-// Storage classes and types
-export { SessionStorage, MongoDBSessionStorage, MemorySessionStorage, type ISessionData } from './storage';
+// Re-export everything from core SDK
+export * from '@cbnsndwch/ghl-sdk-core';
 
-// Logging classes and types
-export { Logger, LogLevel, type LogLevelType, type LogLevelString } from './logging';
+// Re-export storage interfaces and base class
+export * from '@cbnsndwch/ghl-sdk-storage';
 
-// Webhook classes and types
-export { WebhookManager } from './webhook';
+// Re-export memory storage (most common default)
+export { MemorySessionStorage } from '@cbnsndwch/ghl-sdk-storage-memory';
 
-// Constants and enums
-export { UserType, type UserTypeValue } from './constants';
+// Re-export webhook utilities
+export * from '@cbnsndwch/ghl-sdk-webhooks';
 
-// Default export - HighLevel wrapper class
-export { HighLevel as default } from './HighLevel';
+// Default export - the main HighLevel class
+export { HighLevel as default } from '@cbnsndwch/ghl-sdk-core';
