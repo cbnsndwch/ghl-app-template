@@ -4,7 +4,7 @@ This repository uses [Changesets](https://github.com/changesets/changesets) for 
 
 ## Workflow Overview
 
-```
+```text
 develop (development) → main (production/releases)
 ```
 
@@ -28,14 +28,17 @@ pnpm changeset
 ```
 
 You'll be prompted to:
+
 1. Select which packages changed (use space to select, enter to confirm)
 2. Choose bump type for each package:
+
    - **patch**: Bug fixes, small changes (0.0.X)
    - **minor**: New features, backwards compatible (0.X.0)
    - **major**: Breaking changes (X.0.0)
 3. Write a summary for the changelog
 
 **Example changeset summary:**
+
 ```markdown
 Add support for Voice AI API endpoints
 
@@ -81,11 +84,13 @@ git push origin develop
    - No release happens yet (still on develop)
 
 4. **Merge `develop` → `main`:**
+
    ```bash
    git checkout main
    git merge develop
    git push origin main
    ```
+
    - GitHub Actions runs the "Release" workflow
    - Packages are published to npm
    - Git tags are created
@@ -125,11 +130,13 @@ Create an npm access token and add it to GitHub Secrets:
 ### 2. Branch Protection (Optional but Recommended)
 
 For `main` branch:
+
 - Require pull request reviews
 - Require status checks to pass (lint, test)
 - Require branches to be up to date
 
 For `develop` branch:
+
 - Require status checks to pass (lint, test)
 
 ## Troubleshooting
@@ -137,6 +144,7 @@ For `develop` branch:
 ### Version PR not created
 
 Check that:
+
 - There are changeset files in `.changeset/` directory
 - The GitHub Actions workflow has permissions to create PRs
 - You're pushing to the `develop` branch
@@ -144,6 +152,7 @@ Check that:
 ### Release not publishing
 
 Check that:
+
 - You merged to `main` branch
 - `NPM_TOKEN` secret is configured correctly
 - The packages have the correct `publishConfig` in package.json
@@ -185,6 +194,7 @@ If you need to release a critical fix quickly:
 - **major (X.0.0)**: Breaking changes, API removals, major refactors
 
 For packages before 1.0.0:
+
 - Still in active development
 - Breaking changes can be minor bumps if needed
 - Once stable, go to 1.0.0
