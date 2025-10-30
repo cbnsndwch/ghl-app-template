@@ -2,6 +2,7 @@
     "name": "@cbnsndwch/ghl-app-contracts",
     "description": "Data contracts for GHL Marketplace apps",
     "version": "0.3.6",
+    "type": "module",
     "license": "MIT",
     "publishConfig": {
         "access": "public",
@@ -22,8 +23,8 @@
         "directory": "libs/contracts"
     },
     "scripts": {
-        "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo",
-        "prebuild": "rimraf lib",
+        "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
+        "prebuild": "rimraf dist",
         "build": "tsc -b tsconfig.json",
         "watch": "tsc -b tsconfig.json -w",
         "prepublish": "pnpm build --force",
@@ -53,9 +54,19 @@
         "typescript-eslint": "^8.46.2"
     },
     "files": [
-        "lib"
+        "dist",
+        "README.md"
     ],
-    "main": "lib/index.js",
-    "typings": "lib/index.d.ts",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        }
+    },
+    "engines": {
+        "node": ">=22"
+    },
     "packageManager": "pnpm@10.20.0"
 }

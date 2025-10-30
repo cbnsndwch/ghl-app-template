@@ -1,10 +1,10 @@
-export * from './app-user-type.enum';
+export * from './app-user-type.enum.js';
 
-export * from './get-access-token.response';
-export * from './ghl-credentials.contract';
-export * from './ghl-credentials-manager.contract';
-export * from './ghl-sso-session.contract';
+export * from './get-access-token.response.js';
+export * from './ghl-credentials.contract.js';
+export * from './ghl-credentials-manager.contract.js';
+export * from './ghl-sso-session.contract.js';
 
-export * from './user.contract';
-export * from './user-role.enum';
-export * from './user-type.enum';
+export * from './user.contract.js';
+export * from './user-role.enum.js';
+export * from './user-type.enum.js';

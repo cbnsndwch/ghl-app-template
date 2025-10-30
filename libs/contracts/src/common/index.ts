@@ -1,5 +1,5 @@
-export * from './has-id.contract';
+export * from './has-id.contract.js';
 
-export * from './dict.contract';
-export * from './list.input';
-export * from './paginated-list.contract';
+export * from './dict.contract.js';
+export * from './list.input.js';
+export * from './paginated-list.contract.js';

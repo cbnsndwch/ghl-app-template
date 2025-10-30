@@ -1,5 +1,5 @@
-import { UserRole } from './user-role.enum';
-import { UserType } from './user-type.enum';
+import { UserRole } from './user-role.enum.js';
+import { UserType } from './user-type.enum.js';
 
 export interface IGhlSsoSessionPermissions extends Record<string, boolean> {
     workflowsEnabled: boolean;

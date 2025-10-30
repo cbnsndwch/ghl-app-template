@@ -1,4 +1,4 @@
-import { AppUserType } from './app-user-type.enum';
+import { AppUserType } from './app-user-type.enum.js';
 
 /**
  * A data contract for a GHL APIv2 credentials set.

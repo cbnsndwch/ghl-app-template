@@ -1,5 +1,5 @@
-import { IGetAccessTokenResponse } from './get-access-token.response';
-import { IGhlCredentials } from './ghl-credentials.contract';
+import { IGetAccessTokenResponse } from './get-access-token.response.js';
+import { IGhlCredentials } from './ghl-credentials.contract.js';
 
 /**
  * A contract for an application service that stores GHL APIv2 credentials.

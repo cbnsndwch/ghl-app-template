@@ -1,17 +1,33 @@
 {
-  "extends": "./tsconfig.base.json",
-  "compilerOptions": {
-    "composite": true
-  },
-  "files": [],
-  "references": [
-    { "path": "./apps/server" },
-    { "path": "./libs/contracts" },
-    { "path": "./libs/sdk" },
-    { "path": "./libs/sdk-core" },
-    { "path": "./libs/sdk-storage" },
-    { "path": "./libs/sdk-storage-memory" },
-    { "path": "./libs/sdk-storage-mongodb" },
-    { "path": "./libs/sdk-webhooks" }
-  ]
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "composite": true
+    },
+    "files": [],
+    "references": [
+        {
+            "path": "./apps/server"
+        },
+        {
+            "path": "./libs/contracts"
+        },
+        {
+            "path": "./libs/sdk"
+        },
+        {
+            "path": "./libs/sdk-core"
+        },
+        {
+            "path": "./libs/sdk-storage"
+        },
+        {
+            "path": "./libs/sdk-storage-memory"
+        },
+        {
+            "path": "./libs/sdk-storage-mongodb"
+        },
+        {
+            "path": "./libs/sdk-webhooks"
+        }
+    ]
 }
