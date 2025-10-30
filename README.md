@@ -2,6 +2,8 @@
 
 A base template for full-stack HighLevel Marketplace apps
 
+<iframe src="https://github.com/sponsors/cbnsndwch/card" title="Sponsor cbnsndwch" height="225" width="600" style="border: 0;"></iframe>
+
 ## Table of Contents
 
 - [Getting Started](#getting-started)
@@ -12,16 +14,15 @@ A base template for full-stack HighLevel Marketplace apps
 
 ## Getting Started
 
-> &nbsp;
-> :warning: This project requires a recent version of NodeJS installed on your
-> machine. The current Active LTS version is NodeJS 20.x and a transition to
-> NodeJS 22.x is expected on November of 2024.
+> [!WARNING] This project requires a recent version of NodeJS installed on your
+> machine. The current Active LTS version is NodeJS 24.x, with NodeJS 22.x
+> in maintenance mode since November of 2025. Older versions of NodeJS are not
+> supported.
 >
-> You should be OK using NodeJS 18.x until the end of the maintenance period in
-> April 2025 but I will not be providing support for it.
+> You should be OK using NodeJS 22.x until the end of the maintenance period in
+> April 2027 but I would encourage you to switch sooner rather than later.
 >
 > For more information on NodeJS LTS releases, see the [NodeJS Release Schedule].
-> &nbsp;
 
 Create a new repository from this template
 
