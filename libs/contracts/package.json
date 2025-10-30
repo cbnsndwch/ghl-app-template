@@ -46,7 +46,7 @@
         "globals": "^16.4.0",
         "mongoose": "^8.19.2",
         "prettier": "^3.6.2",
-        "rimraf": "6.0.1",
+        "rimraf": "6.1.0",
         "source-map-support": "^0.5.21",
         "ts-node": "^10.9.2",
         "tsconfig-paths": "^4.2.0",
