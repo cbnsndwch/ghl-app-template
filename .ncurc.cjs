@@ -22,5 +22,9 @@ module.exports = {
     /**
      * Put the names of packages you don't want NCU to suggest updates for here.
      */
-    reject: ['conventional-changelog-cli']
+    reject: [
+        'conventional-changelog-cli',
+        '@types/node'
+        //
+    ]
 };
